@@ -4,7 +4,7 @@
 
 @layer components {
   .container-wrapper {
-    @apply max-w-7xl w-full mx-auto px-2;
+    @apply max-w-7xl w-full mx-auto px-5;
   }
   /* header */
   .nav {

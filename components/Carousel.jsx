@@ -18,7 +18,7 @@ export default function Carousel() {
 
   return (
 
-        <div className="h-full flex items-center justify-center py-5">
+        <div className="h-full flex items-center justify-center py-5 container-wrapper">
           <Swiper className="mySwiper" loop={true} pagination={{"dynamicBullets": true, clickable: true}} autoplay={{
             "delay": 8000,
             "disableOnInteraction": false
@@ -31,7 +31,7 @@ export default function Carousel() {
                       <span className="text-3xl md:text-xl text-secondary">Our Specil Dish</span>
                       <h2 className="text-7xl md:text-5xl font-black text-primary">{slide.title}</h2>
                       <p className="text-2xl md:text-lg text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus dolor cumque?</p>
-                      <MyButton/>
+                      <MyButton text="Order Now"/>
                     </div>
                     <div className="h-full md:pb-10">
                       <img

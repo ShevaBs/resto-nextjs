@@ -24,7 +24,7 @@ export default function Header() {
           <Link href='/'>
             <a className="nav-link">Home</a>
           </Link>
-          <Link href='/'>
+          <Link href='/dishes'>
             <a className="nav-link">Dishes</a>
           </Link>
           <Link href='/'>

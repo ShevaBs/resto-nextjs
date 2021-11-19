@@ -1,8 +1,8 @@
-export default function MyButton() {
+export default function MyButton({text}) {
   return (
     <button 
-      className="bg-primary hover:bg-secondary relative z-[999] text-white py-2 px-7 text-xl rounded-md ">
-      Order Now
+      className="bg-primary hover:bg-secondary relative z-[999] text-white py-2 px-5 text-xl rounded-md transition-all whitespace-nowrap">
+      {text}
     </button>
   )
 }
