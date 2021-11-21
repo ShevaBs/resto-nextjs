@@ -2,6 +2,8 @@ import Layout from "../components/Layout";
 import MyButton from "../components/MyButton";
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import AboutIconBlock from "../utils/AboutIconBlock";
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 
 export default function about() {
   return (
@@ -16,8 +18,8 @@ export default function about() {
             <p className="text-base text-gray-500">Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Aperiam, Nemo. Sit Porro Illo Eos Cumque Deleniti Iste Alias, Eum Natus.</p>
             <div className="flex flex-wrap gap-4">
               <AboutIconBlock Icon={DirectionsCarIcon} text="Free Delivery"/>
-              <AboutIconBlock Icon={DirectionsCarIcon} text="Free Delivery"/>
-              <AboutIconBlock Icon={DirectionsCarIcon} text="Free Delivery"/>
+              <AboutIconBlock Icon={AttachMoneyIcon} text="Easy Payments"/>
+              <AboutIconBlock Icon={HeadsetMicIcon} text="24/7 Service"/>
             </div>
             <MyButton text="Learn More"/>
           </div>

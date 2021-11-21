@@ -36,7 +36,7 @@ export default function Header() {
           <Link href='/review'>
             <a className="nav-link">Review</a>
           </Link>
-          <Link href='/'>
+          <Link href='/order'>
             <a className="nav-link">Order</a>
           </Link>
         </nav>

@@ -7,9 +7,7 @@ export default function menu() {
 
   return (
     <Layout title="Our Menu" subtitle="Today's Speciality">
-      <div>
-        <Products items={menu}/>
-      </div>
+      <Products items={menu}/>
     </Layout>
   )
 }

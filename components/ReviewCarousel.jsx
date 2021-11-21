@@ -48,7 +48,7 @@ export default function ReviewCarousel() {
         {
           reviews.map(review => (
             <SwiperSlide key={review.id}>
-              <div className="shadow-lg rounded-lg border border-gray-300 p-4 my-5">
+              <div className="shadow-lg rounded-lg border border-gray-300 p-4 my-5 cursor-pointer">
 
                 <div className="flex gap-1">
                   <div className="w-16 h-16 rounded-full overflow-hidden">
