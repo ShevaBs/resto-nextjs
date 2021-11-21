@@ -13,13 +13,15 @@ export default function Layout({children, title, subtitle}) {
       <Header/>
 
       <main className="mt-[80px] md:relative z-40 flex-1">
-        <div className="text-center">
+        <div className="text-center flex flex-col h-full">
+          <div>
             <h2 className="text-secondary text-xl font-semibold mt-5">{title}</h2>
             <h3 className="text-primary text-3xl font-semibold uppercase">{subtitle}</h3>
-          {/* <div className="container-wrapper">
-            <Products items={popularDishes}/>
-          </div> */}
-          {children}
+          </div>
+        
+          <div className=" flex-1">
+            {children}
+          </div>
         </div>
       </main>
 

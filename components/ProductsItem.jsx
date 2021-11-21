@@ -7,8 +7,8 @@ export default function ProductsItem({title, img, price, rating}) {
   return (
     <div className="flex flex-col gap-2 items-center py-6 bg-white max-w-xs w-full rounded-md shadow-lg hover:scale-105 transition-all duration-300">
       <div className="h-56 px-4 relative">
-        <img className=" object-cover h-full rounded-md" src={img} alt="product-img" />
-        <div className="header-icon absolute top-2 right-6">
+        <img className=" object-scale-down	 h-full rounded-md" src={img} alt="product-img" />
+        <div className="header-icon absolute top-8 right-6">
           <FavoriteIcon />
         </div>
       </div>

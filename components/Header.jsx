@@ -33,7 +33,7 @@ export default function Header() {
           <Link href='/menu'>
             <a className="nav-link">Menu</a>
           </Link>
-          <Link href='/'>
+          <Link href='/review'>
             <a className="nav-link">Review</a>
           </Link>
           <Link href='/'>
