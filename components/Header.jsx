@@ -27,7 +27,7 @@ export default function Header() {
           <Link href='/dishes'>
             <a className="nav-link">Dishes</a>
           </Link>
-          <Link href='/'>
+          <Link href='/about'>
             <a className="nav-link">About</a>
           </Link>
           <Link href='/'>

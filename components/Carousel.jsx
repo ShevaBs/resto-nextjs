@@ -18,7 +18,7 @@ export default function Carousel() {
 
   return (
 
-        <div className="h-full flex items-center justify-center py-5 container-wrapper">
+        <div className="h-full flex items-center justify-center container-wrapper">
           <Swiper className="mySwiper" loop={true} pagination={{"dynamicBullets": true, clickable: true}} autoplay={{
             "delay": 8000,
             "disableOnInteraction": false

@@ -3,8 +3,10 @@ import ReactStars from "react-rating-stars-component";
 
 export default function ProductsItem({title, img, price, rating}) {
   return (
-    <div className="flex flex-col gap-2 items-center p-6 bg-white max-w-xs w-full rounded-md shadow-md hover:scale-105 transition-all duration-300">
-      <img src={img} alt="product-img" />
+    <div className="flex flex-col gap-2 items-center p-6 bg-white max-w-xs w-full rounded-md shadow-lg hover:scale-105 transition-all duration-300">
+      <div className="h-56">
+        <img className=" object-contain h-full" src={img} alt="product-img" />
+      </div>
       <h3 className="text-2xl font-semibold text-primary">{title}</h3>
       <ReactStars
         count={5}
