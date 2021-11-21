@@ -7,9 +7,7 @@ export default function dishes() {
 
   return (
     <Layout title="Our Dishes" subtitle="Popular Dishes">
-      <div className="container-wrapper">
-        <Products items={popularDishes}/>
-      </div>
+      <Products items={popularDishes}/>
     </Layout>
   )
 }

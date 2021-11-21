@@ -30,7 +30,7 @@ export default function Header() {
           <Link href='/about'>
             <a className="nav-link">About</a>
           </Link>
-          <Link href='/'>
+          <Link href='/menu'>
             <a className="nav-link">Menu</a>
           </Link>
           <Link href='/'>
