@@ -7,7 +7,8 @@ export default function Products({items}) {
       <div className="grid grid-cols-4 lg:grid-cols-2 md:flex flex-wrap gap-5 place-items-center justify-center py-10">
         {
           items.map(item => (
-            <ProductsItem 
+            <ProductsItem
+              key={item.id} 
               id={item.id}
               title={item.name}
               img={item.img}
