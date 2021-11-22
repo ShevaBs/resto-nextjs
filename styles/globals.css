@@ -21,4 +21,9 @@
     @apply cursor-pointer p-3 rounded-full bg-[#eee] text-primary hover:bg-secondary 
     hover:text-white transition-all duration-300;
   }
+
+  /* cart */
+  .counter-btn {
+    @apply bg-gray-300 p-2 rounded-md text-primary hover:bg-secondary hover:text-white transition-all shadow-md drop-shadow-md hover:scale-105;
+  }
 }

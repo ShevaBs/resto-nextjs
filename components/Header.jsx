@@ -53,9 +53,11 @@ export default function Header() {
           <div className="header-icon">
             <FavoriteIcon />
           </div>
-          <div className="header-icon">
-            <ShoppingCartIcon/>
-          </div>
+          <Link href="/cart">
+            <div className="header-icon">
+              <ShoppingCartIcon/>
+            </div>
+          </Link>
         </div>
 
       </div>
