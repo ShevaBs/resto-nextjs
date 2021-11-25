@@ -24,10 +24,10 @@ export default function CartListItem({item}) {
           fontSize="medium" 
           onClick={() => removeFromCartHandler(item.id, item.quantity, -productTotalPrice)} />
       </div>
-      <div className="max-w-[200px] min-w-[100px] rounded-lg overflow-hidden ">
-        <img className="object-contain" src={item.img} alt="" />
+      <div className="max-w-[200px] min-w-[100px] h-40 rounded-lg overflow-hidden ">
+        <img className="object-contain h-full" src={item.image} alt="" />
       </div>
-      <p className="text-3xl font-bold text-primary flex-1 text-left">{item.name}</p>
+      <p className="text-xl font-bold text-primary flex-1 text-left md:text-center">{item.title}</p>
       <div className="flex sm:flex-col gap-5 items-center">
 
         <div className="flex gap-3 items-center">
