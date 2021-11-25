@@ -5,9 +5,11 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 export default function Header() {
   const [menuActive, setMenuActive] = useState(false);
+  const totalQuantity = useSelector(state => state.cart.totalQuantity);
 
   return (
     <header className="fixed inset-x-0 z-50 h-20 flex items-center justify-between shadow-md bg-white">
@@ -16,7 +18,7 @@ export default function Header() {
         <Link href="/">
           <div className="flex items-center gap-1 cursor-pointer">
             <img className="w-[30px]" src="./images/logo.png" alt="logo" />
-            <h1 className="text-2xl font-black text-primary">Resto.</h1>
+            <h1 className="sm:hidden text-2xl font-black text-primary">Resto.</h1>
           </div>
         </Link>
   
@@ -53,9 +55,18 @@ export default function Header() {
           <div className="header-icon">
             <FavoriteIcon />
           </div>
-          <Link href="/cart">
-            <div className="header-icon">
-              <ShoppingCartIcon/>
+          <Link href="/cart" >
+            <div className="relative">
+              <div className="header-icon">
+                <ShoppingCartIcon/>
+              </div>
+              {
+                totalQuantity > 0 && (
+                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-red-400 flex item-center justify-center">
+                    <span className="text-white">{totalQuantity}</span>
+                  </div>
+                )
+              }
             </div>
           </Link>
         </div>

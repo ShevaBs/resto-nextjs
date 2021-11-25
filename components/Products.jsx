@@ -8,12 +8,9 @@ export default function Products({items}) {
         {
           items.map(item => (
             <ProductsItem
-              key={item.id} 
-              id={item.id}
-              title={item.name}
-              img={item.img}
-              rating={item.rating}
-              price={item.price}
+              key={item.id}
+              item={item}
+              products={items} 
             />
           ))
         }

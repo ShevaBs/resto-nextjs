@@ -1,28 +1,52 @@
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import CloseIcon from '@mui/icons-material/Close';
+import { useDispatch } from 'react-redux';
+import {adjustQuantity, removeFromCart } from '../features/cartSlice';
 
-export default function CartListItem() {
+export default function CartListItem({item}) {
+  const dispatch = useDispatch();
+
+  const adjustQuantityHandler = (id, value, price) => {
+    dispatch(adjustQuantity({id, value, price}))
+  }
+
+  const removeFromCartHandler = (id, value, price) => {
+    dispatch(removeFromCart({id, value, price}))
+  }
+
+  let productTotalPrice = item.price * item.quantity;
+
   return (
-    <li className="flex items-center p-5 border-b border-gray-300 border-opacity-30 gap-3">
-      <div className="ring-1 ring-gray-300 ring-opacity-30 shadow-md drop-shadow-md rounded-full p-2 text-gray-400 hover:bg-gray-200 hover:text-red-500 hover:scale-105 transition-all">
-        <CloseIcon fontSize="medium"/>
+    <li className="flex sm:flex-col items-center p-5 border-b border-gray-300 border-opacity-30 gap-3">
+      <div className="sm:self-end ring-1 ring-gray-300 ring-opacity-30 shadow-md drop-shadow-md rounded-full p-2 text-gray-400 hover:bg-gray-200 hover:text-red-500 hover:scale-105 transition-all">
+        <CloseIcon 
+          fontSize="medium" 
+          onClick={() => removeFromCartHandler(item.id, item.quantity, -productTotalPrice)} />
       </div>
       <div className="max-w-[200px] min-w-[100px] rounded-lg overflow-hidden ">
-        <img className="object-contain" src="./images/menu-1.jpg" alt="" />
+        <img className="object-contain" src={item.img} alt="" />
       </div>
-      <p className="text-3xl font-bold text-primary flex-1 text-left">Pizza</p>
-      <div className="flex gap-2 items-center">
-        <div className="counter-btn">
-          <AddIcon />
+      <p className="text-3xl font-bold text-primary flex-1 text-left">{item.name}</p>
+      <div className="flex sm:flex-col gap-5 items-center">
+
+        <div className="flex gap-3 items-center">
+          <div 
+            onClick={() => adjustQuantityHandler(item.id, 1, item.price)}
+            className="counter-btn">
+            <AddIcon />
+          </div>
+          <span className="text-2xl text-bold">{item.quantity}</span>
+          <div 
+            onClick={() => adjustQuantityHandler(item.id, -1, -item.price)}
+            className="counter-btn">
+            <RemoveIcon />
+          </div>
         </div>
-        <span className="text-2xl text-bold">0</span>
-        <div className="counter-btn">
-          <RemoveIcon />
+
+        <div className="text-secondary font-semibold text-xl drop-shadow-md">
+          ${productTotalPrice.toFixed(2)}
         </div>
-        <div className="text-secondary font-semibold text-xl drop-shadow-md ml-5">
-        $19.66
-      </div>
       </div>
       
     </li>
